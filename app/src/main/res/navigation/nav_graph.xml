@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainLayout">
+    <activity
+        android:id="@+id/addNodeLayout"
+        android:name="com.example.androidmultiplewindows.AddNodeLayout"
+        android:label="activity_add_node_layout"
+        tools:layout="@layout/activity_add_node_layout" />
+    <activity
+        android:id="@+id/mainLayout"
+        android:name="com.example.androidmultiplewindows.MainLayout"
+        android:label="activity_main_layout"
+        tools:layout="@layout/activity_main_layout" >
+        <action
+            android:id="@+id/action_mainLayout2_to_addNodeLayout"
+            app:destination="@id/addNodeLayout" />
+    </activity>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.androidmultiplewindows.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_mainLayout"
+            app:destination="@id/mainLayout" />
+    </activity>
+</navigation>

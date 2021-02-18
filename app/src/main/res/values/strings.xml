@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidMultipleWindows</string>
+    <string name="title_activity_add_node_layout">AddNodeLayout</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="text1">TestText</string>
+    <string name="title_activity_main_layout">MainLayout</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

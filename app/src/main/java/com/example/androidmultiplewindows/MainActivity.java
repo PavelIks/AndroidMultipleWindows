@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
-    public void  openOtherWindow(View v)
+    public void openOtherWindow(View v)
     {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, AddNodeLayout.class);
         intent.putExtra("in_data", "Hello from Main Activity!");
         startActivity(intent);
     }
