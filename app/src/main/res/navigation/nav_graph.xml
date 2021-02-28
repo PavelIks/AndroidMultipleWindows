@@ -3,28 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainLayout">
-    <activity
-        android:id="@+id/addNodeLayout"
-        android:name="com.example.androidmultiplewindows.AddNodeLayout"
-        android:label="activity_add_node_layout"
-        tools:layout="@layout/activity_add_node_layout" />
-    <activity
-        android:id="@+id/mainLayout"
-        android:name="com.example.androidmultiplewindows.MainLayout"
-        android:label="activity_main_layout"
-        tools:layout="@layout/activity_main_layout" >
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
         <action
-            android:id="@+id/action_mainLayout2_to_addNodeLayout"
-            app:destination="@id/addNodeLayout" />
-    </activity>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.androidmultiplewindows.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" >
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
         <action
-            android:id="@+id/action_mainActivity_to_mainLayout"
-            app:destination="@id/mainLayout" />
-    </activity>
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
 </navigation>
